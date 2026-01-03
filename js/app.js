@@ -30,10 +30,11 @@ function Hero({ car, ctaRef }) {
           <a ref={ctaRef} className="btn btn-primary cta" href={car.contactEmail}>
             ✉️ Contacter le vendeur
           </a>
-          <p className="no-pro">
-	  Vente entre particuliers uniquement – professionnels merci de vous abstenir
-	  (sauf achat direct).
-	</p>
+		  <p className="pro-warning">
+		    🚫 Vente entre particuliers uniquement — professionnels merci de vous abstenir
+		    <br />
+		    <small>(sauf achat direct sans négociation)</small>
+		  </p>
 
           <div className="top-specs">
             {car.topSpecs.map((s, i) => (
@@ -52,14 +53,16 @@ function Hero({ car, ctaRef }) {
 function BuyerFit({ advantages }) {
   return (
     <section className="buyer-fit">
-      <div className="container card">
-      <h2>🎯 Ce véhicule est fait pour vous si :</h2>
-      <ul>
-            {advantages.map((p, i) => (
-              <li key={i}>{p}</li>
-            ))}
-      </ul>
-      </div>
+      <div className="container">
+		  <div className="card">
+		  <h2>🎯 Ce véhicule est fait pour vous si :</h2>
+		  <ul>
+				{advantages.map((p, i) => (
+				  <li key={i}>{p}</li>
+				))}
+		  </ul>
+		  </div>
+	  </div>
     </section>
   );
 }
@@ -68,7 +71,7 @@ function KeyPoints({ points }) {
   return (
     <section className="section">
       <div className="container">
-        <div className="key-points">
+        <div className="card key-points">
           <h2>✅ Les essentiels à retenir</h2>
           <ul>
             {points.map((p, i) => (

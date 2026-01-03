@@ -289,12 +289,6 @@
       /* =========================
    KEY POINTS – SIMPLIFIÉ
    ========================= */
-.key-points {
-  background: #ecfdf5;               /* vert très clair */
-  border: 1px solid #bbf7d0;
-  border-radius: 16px;
-  padding: 18px 20px;
-}
 
 .key-points h2 {
   margin: 0 0 12px;
@@ -303,25 +297,27 @@
 }
 
 .key-points ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .key-points li {
-  position: relative;
-  padding-left: 28px;
-  font-weight: 600;
-  color: #064e3b;
+    font-weight: 600;
+	color: white;
+    background: #45B69C;
+    padding: 6px 12px;
+    width: max-content;
+    text-align: center;
+    border-radius: 10px;
 }
 
 .key-points li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
+  content: "✅";
   color: #16a34a;
   font-weight: 900;
 }
